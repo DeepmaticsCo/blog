@@ -9,6 +9,6 @@ title: Deepmatics
     <td><a href="./ai-ml/index.md">AI/ML</a></td>
     <td><a href="./photography/index.md">Photography</a></td>
     <td><a href="./book-summaries/index.md">Book Summaries</a></td>
-    <td><a href="./general/about.md">About</a></td>
+    <td><a href="../blog/general/about.md">About</a></td>
   </tr>
 </table>
