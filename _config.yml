@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
-title: My Blog
-description: A blog about AI/ML, Photography, and Book Summaries
+title: Deepmatics Blog
+description: Exploring AI and a few other interests.
+css: /assets/style.css
