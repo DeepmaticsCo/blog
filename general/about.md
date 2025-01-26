@@ -10,5 +10,5 @@ Hello! I'm Satish, a tech enthusiast with a knack for unraveling the depths of A
 ![My Photo](../assets/profile-pic.jpg)
 
 ## Navigation
-- [Home](../index.md)
+[Home](../index.md)
 

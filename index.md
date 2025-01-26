@@ -6,9 +6,9 @@ title: Deepmatics
 
 <table class="centered-table">
   <tr>
-    <td><a href="./ai-ml/index.html">AI/ML</a></td>
-    <td><a href="./photography/index.html">Photography</a></td>
-    <td><a href="./book-summaries/index.html">Book Summaries</a></td>
-    <td><a href="../blog/general/about.html">About</a></td>
+    <td><a href="../ai-ml/index.md">AI/ML</a></td>
+    <td><a href="../photography/index.md">Photography</a></td>
+    <td><a href="../book-summaries/index.md">Book Summaries</a></td>
+    <td><a href="../blog/general/about.md">About</a></td>
   </tr>
 </table>
