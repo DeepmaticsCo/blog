@@ -1,0 +1,19 @@
+.centered-table {
+    margin: 0 auto; /* Centers the table */
+    text-align: center; /* Centers text inside cells */
+    border-collapse: collapse; /* Optional: Remove gaps between table borders */
+}
+
+.centered-table td {
+    padding: 10px; /* Adds space inside table cells */
+    border: 1px solid #ddd; /* Optional: Adds borders to the table */
+}
+
+.centered-table a {
+    text-decoration: none; /* Removes underline from links */
+    color: #007acc; /* Custom link color */
+}
+
+.centered-table a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}

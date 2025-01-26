@@ -2,9 +2,13 @@
 layout: default
 title: Deepmatics
 ---
-<div style="text-align: center;">
+<link rel="stylesheet" href="./assets/style.css">
 
-| [AI/ML](./ai-ml/index.md) | [Photography](./photography/index.md) | [Book Summaries](./book-summaries/index.md) | [About](./general/about.md) |
-|---------------------------|---------------------------------------|---------------------------------------------|-----------------------------|
-
-</div>
+<table class="centered-table">
+  <tr>
+    <td><a href="./ai-ml/index.md">AI/ML</a></td>
+    <td><a href="./photography/index.md">Photography</a></td>
+    <td><a href="./book-summaries/index.md">Book Summaries</a></td>
+    <td><a href="./general/about.md">About</a></td>
+  </tr>
+</table>
