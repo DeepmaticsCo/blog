@@ -5,10 +5,13 @@ title: Deepmatics\About
 
 # About Me
 
-Hello! I'm Satish, a tech enthusiast with a knack for unraveling the depths of AI and Machine Learning. When I'm not diving deep into algorithms, you'll find me capturing the world through my camera lens or getting lost in the pages of a captivating book. Welcome to my corner of the internet, where technology meets creativity, and curiosity knows no bounds!
+Hello! I'm Satish, a tech enthusiast with a knack for AI and Machine Learning. When I'm not diving deep into algorithms, you'll find me capturing the world through my camera lens or getting lost in the pages of a captivating book. Welcome to my corner of the internet!
 
-![My Photo](../assets/profile-pic.jpg)
+<div style="display: flex;">
+    <img src="../assets/profile-pic.png" alt="My Photo" width="300" style="margin-right: 50px;">
+    <iframe src="linkedin-badge.html" style="width: 400px; height: 310px; border: none; overflow: hidden; margin-right: 10px;"></iframe>
+</div>
 
 ## Navigation
-[Home](../index.md)
+[Home](../index.html)
 
