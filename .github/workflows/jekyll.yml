@@ -27,8 +27,9 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ github.event.repository.name }}"
       
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
+          name: github-pages
           path: ./_site 
       
       - name: Deploy to GitHub Pages
