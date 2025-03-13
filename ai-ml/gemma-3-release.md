@@ -5,7 +5,7 @@ title: Deepmatics
 <link rel="stylesheet" href="../assets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-# Google Releases Gemma 3: A New Era of Open AI Models
+# Google Releases Gemma 3!
 
 [Google’s Gemma 3 Announcement](https://blog.google/technology/developers/gemma-3/) <br>
 [Gemma3 Technical Report](https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf)

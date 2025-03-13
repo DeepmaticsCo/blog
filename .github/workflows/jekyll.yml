@@ -5,17 +5,31 @@ on:
     branches:
       - main 
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write  # Ensures the necessary permissions for deployment
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1 # Updated action
+      - uses: ruby/setup-ruby@v1  # Updated action
         with:
           ruby-version: '3.2.0'
-          bundler-cache: true # Improves performance by caching installed gems.
-      - run: bundle exec jekyll build --baseurl "${{ github.event.repository.name }}"
-      - uses: actions/deploy-pages@v2
+          bundler-cache: true 
+      
+      - name: Set up Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Build Site
+        run: bundle exec jekyll build --baseurl "${{ github.event.repository.name }}"
+      
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          artifact_name: github-pages
-          artifact_dir: ./_site
+          path: ./_site 
+      
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
