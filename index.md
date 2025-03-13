@@ -16,10 +16,10 @@ title: Deepmatics
 
 
 <div class="blog-card">
-    <img src="./assets/featured-image.jpg" alt="Blog Post Image" class="card-image">
+    <img src="./assets/Gemma3_KeywordBlog_RD3.png" alt="Gemma3" class="card-image">
     <div class="card-content">
-        <h3 class="card-title">Blog Post Title</h3>
-        <p class="card-description">Short description of the blog post.</p>
-        <a href="path/to/blog-post.html" class="card-link">Read More</a>
+        <h3 class="card-title">Google Gemma3 Release</h3>
+        <p class="card-description"> Gemma 3 comes in a range of sizes (1B, 4B, 12B and 27B)</p>
+        <a href="./ai-ml/gemma-3-release.html" class="card-link">Read More</a>
     </div>
 </div>
