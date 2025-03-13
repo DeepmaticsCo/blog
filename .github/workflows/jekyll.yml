@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1  # Updated action
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2.0'
-          bundler-cache: true 
+          bundler-cache: true  # Improves performance by caching installed gems.
       
       - name: Set up Pages
         uses: actions/configure-pages@v3
@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: github-pages
-          path: ./_site 
+          path: ./_site  # Ensure this matches the correct output directory
       
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
