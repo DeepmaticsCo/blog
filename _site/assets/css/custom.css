@@ -1,0 +1,178 @@
+/* Blog Card Styles */
+.blog-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.blog-card {
+    flex-basis: calc(33.33% - 40px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.blog-card .card-image {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.card-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card-link {
+    display: inline-block;
+    background-color: #0077B5;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card-link:hover {
+    background-color: #005582;
+}
+
+/* Responsive Adjustments (Cards) */
+@media (max-width: 768px) {
+    .blog-card {
+        flex-basis: 90%;
+        margin: 10px auto;
+    }
+}
+
+/* Header Styles (Custom) */
+header .header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+header .header-left {
+    flex: 1; /* Allow header-left to take up available space */
+}
+
+header .header-left h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+header .header-left h2 {
+    font-size: 1em;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+/* About Card Styles (Header Specific Overrides) */
+header .about-card {
+    display: flex;
+    align-items: center;
+    max-width: 300px; /* Reduced to fit with logo */
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Style the Deepmatics Logo in the Header */
+header .header-container img.about-card-image {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header .about-card-content {
+    flex: 1;
+}
+
+header .about-card-content a {
+    font-size: 0.9em;
+    line-height: 1.2;
+}
+
+/* Responsive Adjustments (Header) */
+@media (max-width: 768px) {
+    header .header-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    header .about-card {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    header .header-left {
+        text-align: center;
+    }
+}
+
+/* ... (other CSS) ... */
+
+/* Badges Container */
+.badges-container {
+    display: flex;
+    align-items: center; /* Vertically align badges */
+    justify-content: flex-start; /* Align badges to the left */
+}
+
+/* Badges Container */
+.badges-container {
+    display: flex;
+    justify-content: flex-start;
+    vertical-align: top;
+}
+
+/* GitHub Profile Badge */
+.github-profile-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: 330px; /* Set width to match LinkedIn badge */
+    height: 260.97px; /* Set height to match LinkedIn badge */
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    vertical-align: top;
+}
+
+.github-profile-badge:hover {
+    background-color: #555;
+}
+
+.github-logo {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    vertical-align: top;
+}

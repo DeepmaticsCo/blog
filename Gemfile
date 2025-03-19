@@ -1,4 +1,6 @@
 source "https://rubygems.org"
 gem "jekyll", "~> 4.0" 
 gem "bundler"
-gem "jekyll-theme-hacker"
+gem 'logger'
+gem 'wdm', '>= 0.1.0'
+gem 'jekyll-seo-tag'

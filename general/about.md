@@ -11,7 +11,11 @@ Hello! I'm Satish, a tech enthusiast with a knack for AI and Machine Learning. W
 
 If you would like a conversation, feel free to drop a message in LinkedIn!
 
-<div style="display: flex;">
-    <iframe src="linkedin-badge.html" style="width: 400px; height: 310px; border: none; overflow: hidden; margin-right: 10px;"></iframe>
+<div class="badges-container" style="vertical-align: top;">
+    <iframe src="linkedin-badge.html" style="width: 400px; height: 310px; border: none; overflow: hidden; margin-right: 10px; vertical-align: top;"></iframe>
 </div>
-
+<div style="vertical-align: top;">
+        <a href="https://github.com/deepmatics" class="github-profile-badge">
+            <img src="/assets/images/github-mark.png" alt="GitHub Logo" class="github-logo"> Github Profile
+        </a>
+</div>

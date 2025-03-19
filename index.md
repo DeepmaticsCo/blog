@@ -2,7 +2,7 @@
 layout: default
 title: Deepmatics
 ---
-<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="./assets/css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div class="blog-cards-container">
@@ -23,13 +23,3 @@ title: Deepmatics
         </div>
     </div>
     </div>
-
-
-<div class="about-card">
-    <img src="./assets/about/logo.png" alt="Deepmatics Logo" class="about-card-image">
-    <div class="about-card-content">
-        <h3 class="about-card-title">Welcome to Deepmatics!</h3>
-        <p class="about-card-description">Read more about the authors!</p>
-        <a href="./general/about.html" class="about-card-link">Read More</a>
-    </div>
-</div>
