@@ -85,8 +85,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bundler
-  jekyll (~> 4.0)
+  bundler (~> 2.6)
+  jekyll (~> 4.4)
   jekyll-seo-tag
   logger
   wdm (>= 0.1.0)
