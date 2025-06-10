@@ -173,9 +173,11 @@ header .about-card-content a {
 /* Content wrapper for sidebar layout */
 .content-wrapper {
     display: flex;
-    gap: 2rem;
+    flex-direction: row-reverse; /* Sidebar on left */
+    gap: 1rem; /* Reduced gap */
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem; /* Add some padding */
 }
 
 #main_content {
@@ -207,21 +209,23 @@ header .about-card-content a {
 }
 
 /* Sidebar Styles */
+
 .sidebar {
-    width: 300px;
-    background: #f8f9fa;
+    width: 280px; /* Slightly smaller */
+    background: #1a1a1a; /* Dark background to match your theme */
+    color: #e0e0e0; /* Light text */
     padding: 1.5rem;
     border-radius: 8px;
     height: fit-content;
     position: sticky;
     top: 2rem;
     transition: all 0.3s ease;
-    border: 1px solid #e9ecef;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #333; /* Dark border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-right: 1rem; /* Space from main content */
 }
-
 .sidebar-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .sidebar-section:last-child {
@@ -230,9 +234,9 @@ header .about-card-content a {
 
 .sidebar-section h3 {
     margin-bottom: 1rem;
-    color: #333;
+    color: #00d4aa; /* Green accent like your terminal theme */
     font-size: 1.1rem;
-    border-bottom: 2px solid #0077B5;
+    border-bottom: 2px solid #00d4aa;
     padding-bottom: 0.5rem;
 }
 
@@ -248,41 +252,66 @@ header .about-card-content a {
 
 .sidebar-section a {
     text-decoration: none;
-    color: #0066cc;
+    color: #4a9eff; /* Blue links to match your "About Me!" */
     display: block;
-    padding: 0.3rem 0.5rem;
-    border-radius: 3px;
-    margin: 0.1rem 0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    margin: 0.2rem 0;
     transition: all 0.2s ease;
+    border-left: 2px solid transparent;
 }
 
 .sidebar-section a:hover {
-    color: #004499;
-    background-color: #e3f2fd;
-    padding-left: 1rem;
+    color: #ffffff;
+    background-color: rgba(74, 158, 255, 0.1);
+    padding-left: 1.2rem;
+    border-left: 2px solid #4a9eff;
 }
 
 .sidebar-section a:focus {
-    outline: 2px solid #0077B5;
+    outline: 2px solid #4a9eff;
     outline-offset: 2px;
-    background-color: #e3f2fd;
+    background-color: rgba(74, 158, 255, 0.1);
 }
 
-/* Current post highlighting */
 .current-post {
     font-weight: bold;
-    color: #d63384 !important;
-    background-color: #f8d7da;
-    padding: 0.25rem 0.5rem !important;
+    color: #00d4aa !important; /* Green for current */
+    background-color: rgba(0, 212, 170, 0.1);
+    padding: 0.4rem 0.8rem !important;
     border-radius: 4px;
-    border-left: 3px solid #d63384;
+    border-left: 3px solid #00d4aa;
 }
 
 .sidebar-section small {
     display: block;
-    color: #666;
+    color: #888; /* Muted gray for dates */
     font-size: 0.8rem;
     margin-top: 0.2rem;
+    padding-left: 0.8rem;
+}
+
+/* ===== SIDEBAR TOGGLE BUTTON - MOVE TO LEFT ===== */
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Changed from right to left */
+    background: #4a9eff; /* Blue to match theme */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: #0066cc;
+    transform: scale(1.1);
 }
 
 /* ===== TABLE OF CONTENTS STYLES ===== */
@@ -304,41 +333,44 @@ header .about-card-content a {
 #toc a {
     font-size: 0.9rem;
     line-height: 1.4;
+    color: #4a9eff;
 }
 
 /* Different heading levels in TOC */
 #toc .toc-h1 {
     font-weight: bold;
-    color: #333;
+    color: #e0e0e0;
     font-size: 1rem;
 }
 
 #toc .toc-h2 {
     padding-left: 1rem;
-    color: #555;
+    color: #4a9eff;
     font-size: 0.9rem;
 }
 
 #toc .toc-h3 {
     padding-left: 2rem;
-    color: #777;
+    color: #888;
     font-size: 0.85rem;
 }
 
 #toc .toc-h4 {
     padding-left: 3rem;
-    color: #999;
+    color: #666;
     font-size: 0.8rem;
 }
 
 /* Active TOC link */
 #toc a.active {
-    color: #d63384;
+    color: #00d4aa;
     font-weight: bold;
-    background-color: #f8d7da;
+    background-color: rgba(0, 212, 170, 0.1);
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
+    border-left: 2px solid #00d4aa;
 }
+
 
 /* ===== SMOOTH SCROLLING AND TARGETING ===== */
 
@@ -361,13 +393,14 @@ html {
 /* Tablet View */
 @media (max-width: 1024px) {
     .content-wrapper {
-        gap: 1.5rem;
+        gap: 1rem;
     }
     
     .sidebar {
-        width: 250px;
+        width: 220px;
     }
 }
+
 
 /* Mobile View */
 @media (max-width: 768px) {
@@ -379,14 +412,15 @@ html {
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0; /* Changed from right to left */
         height: 100vh;
         z-index: 999;
         overflow-y: auto;
-        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* Shadow on right side */
         border-radius: 0;
-        transform: translateX(100%);
+        transform: translateX(-100%); /* Hide to the left */
         transition: transform 0.3s ease;
+        margin-right: 0;
     }
     
     /* Show sidebar when toggled */
@@ -396,7 +430,7 @@ html {
     
     .sidebar-toggle {
         top: 10px;
-        right: 10px;
+        left: 10px; /* Keep on left */
         z-index: 1001;
     }
 }
