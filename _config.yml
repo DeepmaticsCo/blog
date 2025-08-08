@@ -3,3 +3,21 @@ description: Exploring AI and a few other interests.
 css: /assets/css/style.css
 plugins:
   - jekyll-seo-tag
+
+# Theme-related directories
+layouts_dir: _app/_layouts
+includes_dir: _app/_includes
+sass:
+  sass_dir: _app/_sass
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md
+  - .git
+  - .jekyll-cache
+  - .github
+  - vendor
+  - node_modules # If you use npm/yarn

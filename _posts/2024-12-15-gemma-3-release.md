@@ -4,11 +4,9 @@ title: "Google Releases Gemma 3!"
 date: 2024-12-15
 image: "/assets/gemma3/Gemma3_KeywordBlog_RD3.png"
 excerpt: "Gemma 3 comes in a range of sizes (1B, 4B, 12B and 27B)."
-author: Your Name
+author: Satish Yenumula
 tags: [AI, ML, Gemma, Google]
 ---
-
-# Google Releases Gemma 3!
 
 [Google's Gemma 3 Announcement](https://blog.google/technology/developers/gemma-3/) <br>
 [Gemma3 Technical Report](https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf)
