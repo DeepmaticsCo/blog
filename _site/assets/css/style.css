@@ -493,15 +493,30 @@ html {
   body {
     font-size: 14px;
   }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+    padding: 10px 0;
+    margin: 0;
+  }
   header h1 {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+  }
+  header h1:before {
+    font-size: 18px;
   }
   header h2 {
-    font-size: 16px;
+    display: none;
   }
   #main_content {
     width: 100%;
-    padding: 120px 10px 0 10px;
+    padding: 10px;
+    margin-top: 60px;
     box-sizing: border-box;
   }
 }
@@ -540,12 +555,24 @@ li {
    h1       - project name
    h2       - project description
 */
+/* Header, <header>
+   header   - container
+   h1       - project name
+   h2       - project description
+*/
 header {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
   border-bottom: 1px dashed #b5e853;
   padding: 20px 0;
   margin: 0 0 40px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
 header h1 {

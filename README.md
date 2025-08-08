@@ -8,11 +8,9 @@ To add a new post to the blog, follow these steps:
 
 ### 1. Create a New Post File
 
-Navigate to the `_posts` directory and create a new Markdown file. The filename must follow this specific format:
+Navigate to the `_articles` directory and create a new Markdown file. The filename should be descriptive and use hyphens to separate words.
 
-`YYYY-MM-DD-your-post-title.md`
-
-For example: `2025-08-08-my-awesome-post.md`
+For example: `your-post-title.md`
 
 ### 2. Add Content and Front Matter
 
@@ -42,7 +40,6 @@ You can add more content, images, and code blocks as needed.
 
 **Note:**
 
-*   Ensure the `date` in the front matter matches the date in the filename.
 *   If you include an image, place the image file in the appropriate subfolder within the `assets` directory (e.g., `assets/images/`).
 
 ### 3. Rebuild the Site
@@ -60,7 +57,7 @@ Your new post will now appear on the main page.
 The repository is organized into two main areas:
 
 *   **User Files (Content Creation):**
-    *   `_posts/`: Contains all blog posts.
+    *   `_articles/`: Contains all blog posts.
     *   `assets/`: Stores all images, CSS, and other static assets.
     *   `pages/`: Contains the site's static pages, such as "About Me."
 
