@@ -14,6 +14,7 @@
     <!-- Header Section -->
     <header>
         <div class="header-container">
+            <button class="sidebar-toggle" id="sidebar-toggle">☰</button>
             <img src="{{ "/assets/about/logo.png" | relative_url }}" alt="Deepmatics Logo" class="about-card-image">
             <div class="header-left">
                 <div class="container">
@@ -25,7 +26,7 @@
             </div>
             <div class="about-card">
                 <div class="about-card-content">
-                    <a href="{{ "/pages/about.html" | relative_url }}" class="about-card-link">About Me!</a>
+                    <a href="{{ "/pages/about.html" | relative_url }}" class="about-card-link">About</a>
                 </div>
             </div>
         </div>
@@ -199,6 +200,13 @@
             
             window.addEventListener('scroll', highlightCurrentSection);
         }
+
+        // Sidebar toggle
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
     </script>
 </body>
 </html>

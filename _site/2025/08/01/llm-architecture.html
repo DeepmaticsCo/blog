@@ -52,6 +52,7 @@
     <!-- Header Section -->
     <header>
         <div class="header-container">
+            <button class="sidebar-toggle" id="sidebar-toggle">☰</button>
             <img src="/assets/about/logo.png" alt="Deepmatics Logo" class="about-card-image">
             <div class="header-left">
                 <div class="container">
@@ -63,7 +64,7 @@
             </div>
             <div class="about-card">
                 <div class="about-card-content">
-                    <a href="/pages/about.html" class="about-card-link">About Me!</a>
+                    <a href="/pages/about.html" class="about-card-link">About</a>
                 </div>
             </div>
         </div>
@@ -128,14 +129,36 @@
             const toc = document.getElementById('toc');
             
             if (headings.length > 0) {
-                const tocList = document.createElement('ul');
-                
+                let tocList = document.createElement('ul');
+                let currentList = tocList;
+                let level = 1;
+
                 headings.forEach((heading, index) => {
                     // Add ID to heading for linking if it doesn't have one
                     if (!heading.id) {
                         heading.id = 'heading-' + index;
                     }
                     
+                    const headingLevel = parseInt(heading.tagName.substring(1));
+
+                    while (headingLevel > level) {
+                        const newList = document.createElement('ul');
+                        if (currentList.lastChild) {
+                            currentList.lastChild.appendChild(newList);
+                        } else {
+                            const newListItem = document.createElement('li');
+                            newListItem.appendChild(newList);
+                            currentList.appendChild(newListItem);
+                        }
+                        currentList = newList;
+                        level++;
+                    }
+
+                    while (headingLevel < level) {
+                        currentList = currentList.parentElement.closest('ul');
+                        level--;
+                    }
+
                     // Create list item and link
                     const listItem = document.createElement('li');
                     const link = document.createElement('a');
@@ -152,7 +175,7 @@
                     });
                     
                     listItem.appendChild(link);
-                    tocList.appendChild(listItem);
+                    currentList.appendChild(listItem);
                 });
                 
                 toc.appendChild(tocList);
@@ -185,6 +208,13 @@
             
             window.addEventListener('scroll', highlightCurrentSection);
         }
+
+        // Sidebar toggle
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
     </script>
 </body>
 </html>

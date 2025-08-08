@@ -88,6 +88,21 @@ header .about-card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     box-sizing: border-box;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+header .about-card-content a.about-card-link {
+    font-size: 1em;
+    line-height: 1.2;
+    color: #00d4aa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .about-card-content a.about-card-link:hover {
+    color: #fff;
 }
 
 /* Style the Deepmatics Logo in the Header */
@@ -102,45 +117,44 @@ header .about-card-content {
     flex: 1;
 }
 
-header .about-card-content a {
-    font-size: 0.9em;
-    line-height: 1.2;
-}
-
 /* Badges Container */
 .badges-container {
     display: flex;
     justify-content: flex-start;
-    vertical-align: top;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.linkedin-badge {
+    width: 400px;
+    height: 280px;
+    border: none;
+    overflow: hidden;
 }
 
 /* GitHub Profile Badge */
 .github-profile-badge {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    background-color: #333;
-    color: white;
-    width: 330px; /* Set width to match LinkedIn badge */
-    height: 260.97px; /* Set height to match LinkedIn badge */
-    padding: 10px 20px; /* Adjust padding as needed */
+    justify-content: center;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    width: 400px;
+    height: 245px;
+    padding: 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
     box-sizing: border-box;
-    transition: background-color 0.3s ease;
-    vertical-align: top;
-}
-
-.github-profile-badge:hover {
-    background-color: #555;
+    border: 1px solid #444;
 }
 
 .github-logo {
     width: 150px;
     height: 150px;
-    margin-right: 10px;
-    vertical-align: top;
+    margin-bottom: 20px;
 }
 
 /* Body Container for Flexbox Layout */
@@ -302,6 +316,15 @@ html {
 
 /* ===== RESPONSIVE DESIGN ===== */
 
+.sidebar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* For Laptops */
 @media (max-width: 1200px) {
     .sidebar {
@@ -329,9 +352,31 @@ html {
 
 /* For Mobile Phones */
 @media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        height: 100%;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
     header .header-container {
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    header .header-left {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     header .about-card {
@@ -339,9 +384,6 @@ html {
         max-width: 100%;
     }
 
-    header .header-left {
-        text-align: center;
-    }
     .blog-card {
         flex-basis: 100%;
         margin: 10px 0;
