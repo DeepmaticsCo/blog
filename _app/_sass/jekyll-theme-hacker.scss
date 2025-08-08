@@ -1,5 +1,6 @@
 @use "rouge-base16-dark";
 @use "default_colors";
+@use "custom";
 
 $body-background: default_colors.$cod-grey !default;
 $body-foreground: default_colors.$gallery !default;
@@ -266,5 +267,3 @@ a {
 #a-title {
   text-decoration: none;
 }
-
-@import "custom";
