@@ -7,7 +7,6 @@ excerpt: "Exporing the architectural aspects of how decoder LLMs have imporved a
 author: "Satish Yenumula"
 tags: [GenAI, Transformers, LLM]
 ---
-
 ## A Subheading
 
 You can add more content, images, and code blocks as needed.

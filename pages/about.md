@@ -14,7 +14,7 @@ If you would like a conversation, feel free to drop a message in LinkedIn!
 <div class="badges-container">
     <iframe src="linkedin-badge.html" class="linkedin-badge"></iframe>
     <a href="https://github.com/deepmatics" class="github-profile-badge">
-        <img src="/assets/images/github-mark.png" alt="GitHub Logo" class="github-logo">
+        <img src="{{ site.baseurl }}/assets/images/github-mark.png" alt="GitHub Logo" class="github-logo">
         <span>Github Profile</span>
     </a>
 </div>
