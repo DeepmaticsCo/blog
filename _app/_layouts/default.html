@@ -120,14 +120,36 @@
             const toc = document.getElementById('toc');
             
             if (headings.length > 0) {
-                const tocList = document.createElement('ul');
-                
+                let tocList = document.createElement('ul');
+                let currentList = tocList;
+                let level = 1;
+
                 headings.forEach((heading, index) => {
                     // Add ID to heading for linking if it doesn't have one
                     if (!heading.id) {
                         heading.id = 'heading-' + index;
                     }
                     
+                    const headingLevel = parseInt(heading.tagName.substring(1));
+
+                    while (headingLevel > level) {
+                        const newList = document.createElement('ul');
+                        if (currentList.lastChild) {
+                            currentList.lastChild.appendChild(newList);
+                        } else {
+                            const newListItem = document.createElement('li');
+                            newListItem.appendChild(newList);
+                            currentList.appendChild(newListItem);
+                        }
+                        currentList = newList;
+                        level++;
+                    }
+
+                    while (headingLevel < level) {
+                        currentList = currentList.parentElement.closest('ul');
+                        level--;
+                    }
+
                     // Create list item and link
                     const listItem = document.createElement('li');
                     const link = document.createElement('a');
@@ -144,7 +166,7 @@
                     });
                     
                     listItem.appendChild(link);
-                    tocList.appendChild(listItem);
+                    currentList.appendChild(listItem);
                 });
                 
                 toc.appendChild(tocList);

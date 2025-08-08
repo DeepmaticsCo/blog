@@ -237,12 +237,12 @@ header .about-card-content a {
 /* ===== TABLE OF CONTENTS STYLES ===== */
 
 #toc ul {
-    margin-left: 1rem;
-    padding-left: 0;
+    list-style: none;
+    padding-left: 1em;
 }
 
 #toc > ul {
-    margin-left: 0;
+    padding-left: 0;
 }
 
 #toc a {
@@ -259,19 +259,16 @@ header .about-card-content a {
 }
 
 #toc .toc-h2 {
-    padding-left: 1rem;
     color: #4a9eff;
     font-size: 0.9rem;
 }
 
 #toc .toc-h3 {
-    padding-left: 2rem;
     color: #888;
     font-size: 0.85rem;
 }
 
 #toc .toc-h4 {
-    padding-left: 3rem;
     color: #666;
     font-size: 0.8rem;
 }
