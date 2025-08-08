@@ -1,6 +1,7 @@
 title: Deepmatics!
 description: Exploring AI and a few other interests.
 css: /assets/css/style.css
+baseurl: "/blog"
 plugins:
   - jekyll-seo-tag
 
