@@ -4,6 +4,11 @@ css: /assets/css/style.css
 plugins:
   - jekyll-seo-tag
 
+collections:
+  articles:
+    output: true
+    permalink: /articles/:title/
+
 # Theme-related directories
 layouts_dir: _app/_layouts
 includes_dir: _app/_includes

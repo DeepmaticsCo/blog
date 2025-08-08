@@ -57,14 +57,17 @@
             {% if page.layout != 'post' %}
             <div class="sidebar-section">
                 <h3>📚 Recent Posts</h3>
-                <ul>
-                    {% for post in site.posts limit:5 %}
+                <ul class="post-list">
+                    {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
+                    {% for post in sorted_articles limit:5 %}
                         <li>
-                            <a href="{{ post.url | relative_url }}"
-                               {% if page.url == post.url %}class="current-post"{% endif %}>
-                                {{ post.title }}
-                            </a>
-                            <small>{{ post.date | date: "%b %d, %Y" }}</small>
+                            <div>
+                                <a href="{{ post.url | relative_url }}"
+                                   {% if page.url == post.url %}class="current-post"{% endif %}>
+                                    {{ post.title }}
+                                </a>
+                                <small>{{ post.date | date: "%b %d, %Y" }}</small>
+                            </div>
                         </li>
                     {% endfor %}
                 </ul>
@@ -72,17 +75,20 @@
             {% endif %}
 
             <!-- All Posts Section - Only show if more than 5 posts -->
-            {% if site.posts.size > 5 %}
+            {% if site.articles.size > 5 %}
             <div class="sidebar-section">
                 <h3>🗂️ All Posts</h3>
-                <ul class="all-posts-list">
-                    {% for post in site.posts offset:5 %}
+                <ul class="all-posts-list post-list">
+                    {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
+                    {% for post in sorted_articles offset:5 %}
                         <li>
-                            <a href="{{ post.url | relative_url }}"
-                               {% if page.url == post.url %}class="current-post"{% endif %}>
-                                {{ post.title }}
-                            </a>
-                            <small>{{ post.date | date: "%b %d" }}</small>
+                            <div>
+                                <a href="{{ post.url | relative_url }}"
+                                   {% if page.url == post.url %}class="current-post"{% endif %}>
+                                    {{ post.title }}
+                                </a>
+                                <small>{{ post.date | date: "%b %d" }}</small>
+                            </div>
                         </li>
                     {% endfor %}
                 </ul>

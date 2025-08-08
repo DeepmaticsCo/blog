@@ -4,7 +4,8 @@ title: Deepmatics
 ---
 
 <div class="blog-cards-container">
-    {% for post in site.posts %}
+    {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
+    {% for post in sorted_articles %}
     <div class="blog-card">
         {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="card-image" />

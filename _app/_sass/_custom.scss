@@ -191,6 +191,25 @@ header .about-card-content {
     padding-bottom: 0.5rem;
 }
 
+/* Styles for post lists in the sidebar */
+.sidebar-section ul.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-section ul.post-list li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-section ul.post-list a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/* Keep other sidebar lists without bullets */
 .sidebar-section ul {
     list-style: none;
     padding: 0;
@@ -234,12 +253,16 @@ header .about-card-content {
     border-left: 3px solid #00d4aa;
 }
 
-.sidebar-section small {
-    display: block;
+.sidebar-section ul.post-list li > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-section ul.post-list li small {
     color: #888;
     font-size: 0.8rem;
     margin-top: 0.2rem;
-    padding-left: 0.8rem;
+    padding-left: 0.8rem; /* Match title indentation */
 }
 
 /* Main Content Styles */
