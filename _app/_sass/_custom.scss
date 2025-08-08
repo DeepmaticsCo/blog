@@ -51,14 +51,6 @@
     background-color: #005582;
 }
 
-/* Responsive Adjustments (Cards) */
-@media (max-width: 768px) {
-    .blog-card {
-        flex-basis: 90%;
-        margin: 10px auto;
-    }
-}
-
 /* Header Styles (Custom) */
 header .header-container {
     max-width: 1000px;
@@ -113,23 +105,6 @@ header .about-card-content {
 header .about-card-content a {
     font-size: 0.9em;
     line-height: 1.2;
-}
-
-/* Responsive Adjustments (Header) */
-@media (max-width: 768px) {
-    header .header-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    header .about-card {
-        margin-bottom: 20px;
-        max-width: 100%;
-    }
-
-    header .header-left {
-        text-align: center;
-    }
 }
 
 /* Badges Container */
@@ -330,18 +305,49 @@ html {
 
 /* ===== RESPONSIVE DESIGN ===== */
 
-/* Tablet View */
-@media (max-width: 1024px) {
-    .content-wrapper {
-        gap: 1rem;
+/* For Laptops */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 250px;
+    }
+    .blog-card {
+        flex-basis: calc(50% - 40px);
     }
 }
 
-
-/* Mobile View */
-@media (max-width: 768px) {
-    .content-wrapper {
+/* For Tablets */
+@media (max-width: 992px) {
+    .body-container {
         flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+    .blog-card {
+        flex-basis: calc(50% - 40px);
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+    header .header-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    header .about-card {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    header .header-left {
+        text-align: center;
+    }
+    .blog-card {
+        flex-basis: 100%;
+        margin: 10px 0;
     }
 }
 
@@ -354,23 +360,12 @@ html {
     .sidebar-section h3 {
         font-size: 1rem;
     }
-    
-    .sidebar-toggle {
-        width: 45px;
-        height: 45px;
-        font-size: 16px;
-    }
 }
 
 /* Print styles - hide sidebar when printing */
 @media print {
-    .sidebar,
-    .sidebar-toggle {
+    .sidebar {
         display: none !important;
-    }
-    
-    .content-wrapper {
-        display: block;
     }
     
     #main_content {
