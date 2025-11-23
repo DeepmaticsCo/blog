@@ -5,7 +5,7 @@ date: 2025-08-01
 image: "assets/llm-architecture/architecture.png"
 excerpt: "A deep, technical dive into the architectural evolution of decoder-based language models, analyzing from first principles the key innovations that have driven performance and efficiency."
 author: "Satish Yenumula"
-tags: [GenAI, Transformers, LLM, Architecture, MQA, GQA, MoE]
+tags: [GenAI, Transformers, LLMs, Architecture, MQA, GQA, MoE]
 ---
 
 ## Introduction
